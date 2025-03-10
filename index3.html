@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Get, Post, Patch, Delete</h1>
+    Get = Get the data from the server.
+    <br />
+    Put = Create a new resource or replace if the resource exists.
+    <br />
+    Post = Create a new resource.
+    <br />
+    Patch = Partially update an existing resource.
+    <h1>Debug API, Network Tab, Status code, headers, Bad API</h1>
+    <p>See the module video 33.8 for better understanding</p>
+    <br />
+    <h1>Catch Error</h1>
+    <p>see the below script</p>
+
+    <script>
+      // ! Catch Error
+      const handleData = () => {
+        fetch("https://jsonplacehoder.typicode.com/users")
+          .then((response) => response.json())
+          .then((data) => console.log(data))
+          .catch((err) => console.log(err));
+      };
+      handleData(); /* TypeError: Failed to fetch
+      at handleData (async.js:3:3)
+      at async.js:9:1 */
+    </script>
+  </body>
+</html>
