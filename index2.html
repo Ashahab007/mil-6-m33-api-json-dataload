@@ -3,14 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      .card {
+        border: 1px solid tomato;
+        margin-top: 10px;
+        padding: 10px;
+        text-align: center;
+        background-color: beige;
+      }
+
+      h4 span {
+        font-weight: normal;
+      }
+    </style>
     <title>Dynamically display loaded data in Website</title>
   </head>
   <body>
     <h1>Dynamically display loaded data in Website</h1>
     <button onclick="loadUserData()">Load User with 3.dynamically.js</button>
     <section>
-      <ol id="users-lists"></ol>
+      <div id="users-lists"></div>
     </section>
+    <br />
+    <h1>Load post and display on the website</h1>
+    <button id="btn-post" onclick="loadPost()">Load Post</button>
+    <ol id="post-container"></ol>
+
     <script src="./script/3.dynamically.js"></script>
   </body>
 </html>
